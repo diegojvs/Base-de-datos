@@ -11,15 +11,15 @@ export class BuscarmedicosComponent implements OnInit {
 
   buscador:Buscador = {
     ID : null
-  }
+  };
 
   constructor(private buscadorservicio:BuscarmedicoService) { }
-
+  
   ngOnInit() {
   }
 
   buscar() {
-    this.buscadorservicio.buscarmedico(this.buscador).subscribe(
+    this.buscadorservicio.buscarmedico(this.buscador.ID).subscribe(
       res => {
         console.log(res);
       },

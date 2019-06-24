@@ -10,7 +10,7 @@ export class BuscarmedicoService {
   API_URI = 'http://localhost:3000';
   constructor(private http: HttpClient) { }
 
-  buscarmedico(id){
-    return this.http.get(`${this.API_URI}/buscar/medicos/:id`,id);
+  buscarmedico(ID: number){
+    return this.http.get(`${this.API_URI}/buscar/medicos/${ID}`);
   }
 }
